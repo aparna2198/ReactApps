@@ -1,0 +1,22 @@
+1) render some component on screen
+2) here for post list 
+ i) post list component should get list from that json api inorder to show itself correctly
+ ii) for this we need to to define componentdidmount lifecycle method in our class (thats why we usong class based componeny method to get access to lifecycle methods)
+3)inside of componentdidmount ----> we call actioncreator  so whenever post list component initially shows up on the screem that action creartor is going to  automaticaaly called
+4)action creator we puuting will have code a(lis of blog post)
+6)after that action creator will return an 'action' 
+7) action object will have our fetched data on our payload property 
+8) dispatch method will dipatch that action and send it to all the reducers 
+9) reducers sees this action and it will pull of just that dat afromthe payload property 
+10) anytime reducers run they r going to return some values 
+11) those values are going to form a new state object inside of a redux store 
+12) any time reducers  run and produce a new state object-----> we gonna take that state and we going to sent off 
+into the react side of our application.--->and redux and reaxt-redux are going to cause the react app to rerender
+
+13)so this time around we going to have list of post in the stateobject
+14) use mapstatetoprops fucntion  to get lus of post out of aur global state object into our postlistcomponent
+
+
+
+action creator camel case fetchPosts
+component name capital   PostLists

@@ -1,0 +1,29 @@
+now basically after dispatch we use middleware  and then to reducer
+inside redux app we can have as many or as few middleware as possible 
+
+
+middelware is a plain javascript fucntion 
+
+which u call when every single action that you dispatch 
+
+inside of that function middleware has the opportunity  to stop an action 
+
+middleware is most populr for deaoling with asynchornous action creators
+
+we using React-thunk middleware to deal with async issues 
+
+
+
+how redux thunk does the job?
+
+generally action creators return ----> action & payload(optional)
+but here instead of this
+redux thunk allows the action creator to return FUNCTIONS thatssss instead
+
+and when u do returna  fucntion redux Thunk automatically invokes that function
+
+invokes the fucntion with dispatch and getState --> these tow are the same we  sw in code pen
+
+we then wait for our request to finish(api request) 
+
+request complete dispatch action MANUALLY(thats the key) and update data inside of our store

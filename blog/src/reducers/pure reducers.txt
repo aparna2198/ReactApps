@@ -1,0 +1,21 @@
+reducers are called with two arguments
+1) previous state (state1) (data) initially at first we givee this as null value  reducername(reducernamesomevalue=null,action)
+2) action 
+  
+and in turn we get new state  state 2(suppose)
+
+
+and in betwee this we are not  suppose to make an api request or to read a file from a hardrive or solicit the user for some input or to reach the dom and pull out a value  (BAADDD) 
+
+when reduecer is called  it should only look at the previous state and action object to decide what to return 
+
+
+MUTATIONS:
+any time i change the contents of the array it is refered to as mutation
+in js strings and numbers are immutable values we cannot change them  in the same way we can easily change array,object 
+ONE OF FTH ERULES OF REDUCERS Is : must not mutate its state arguments
+but in last app where we sent selectedsong as the state which changes(mutates) as the user selects diff songs
+
+we need to find good ways of manipulating the state instead of mutating them
+eg:[...colours,"red"] instead of colours.push("red")
+[...profile,age:30]

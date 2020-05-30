@@ -1,0 +1,51 @@
+import jsonPlaceHolder from '../apis/jsonPlaceHolder';
+
+// actions must beplain objects 
+export const fetchPosts = async () =>
+{
+ const response=   await jsonPlaceHolder.get('/post');
+    return{
+        type: 'FETCH_POST',
+        payload:response
+    }
+}
+
+1) when we put this eact code in babel 
+babel is platform which make are js code compatible with the available browser basically trasncompiler
+in that it uses a switch statement wherein  
+          case 0:
+            _context.next = 2;
+            return _jsonPlaceHolder.default.get('/post'); api networl request
+
+          case 2:
+            response = _context.sent;
+            return _context.abrupt("return", {
+              type: 'FETCH_POST',
+              payload: response
+            });
+rule --> when action creator runs it should get us plain object  instead we getting an api request data
+
+
+
+2) this all redux procedure to get data to reducers is very very fast so by the time we get data from third party via api its too late and reducer as already ran by that time
+so we cant use that
+
+
+
+we can remove async instead 
+import jsonPlaceHolder from '../apis/jsonPlaceHolder';
+
+// actions must beplain objects 
+export const fetchPosts =  () =>
+{
+ const promise=   jsonPlaceHolder.get('/post');
+    return{
+        type: 'FETCH_POST',
+        payload:promise
+    }
+}
+thiss code wont give u a error
+but api request wont give a response it will give you a promise 
+which means we wont get the data we wiil get the data when the later sometime when it is been received by the promise 
+but not on that instant of calling the .get fucntion 
+promise will give us notification whetehr the request is completed at some point in future

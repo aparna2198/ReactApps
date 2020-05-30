@@ -1,0 +1,9 @@
+redux is a state managemenet library (state the same as we used in class based component)
+rather than maintinaing state in react
+we extract it in reduc library
+react->render content on the screen
+->handle user events
+it does not handle maintain data 
+it allows us to create complex react project with ease  
+redux incharge of handling data  inside 
+of our applicationkk

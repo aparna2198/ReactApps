@@ -1,0 +1,15 @@
+lodhash is utility javascript library
+
+has many fucntion built into it that makes writing javascript easy 
+
+memoize is a one of the fucntionss
+function getUser(id){
+fetch(id);
+return "made  a request"
+}
+
+const memoizedGetUser=_.memoize(getUser)
+memoizedGetUser is the same function as getuser except for
+we can call memoizedGetUser only one time with any unqiue set of argument
+after we call it one time  we can still call it but the original function  is not going to be invoked
+instead memoize  will returnd whatever it returned previously the last time we ran it with the identical set of arguments
