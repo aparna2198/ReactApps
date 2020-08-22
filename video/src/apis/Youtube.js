@@ -1,5 +1,5 @@
 import axios from 'axios';
-const API_KEY = 'AIzaSyBOsmiPJoBnG4q1XRAG8FeWgUPuC6tGK9Q';
+const API_KEY = <fill your key>
 // preconfigured instance of axios that already has baseurl and defult parameters loaded into it
 
 export const baseParams = {
